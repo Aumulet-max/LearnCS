@@ -101,8 +101,32 @@ namespace LearnCS
 
             //Foreach loop
             foreach (string car in cars) Console.WriteLine($"car: {car}");
-            
 
+            //Functions
+            string Hello(string name)
+            {
+                return $"Hello {name}!";
+            }
+
+            /*string h = Hello();
+            Console.WriteLine(h);*/
+            Console.WriteLine(Hello("AUM"));
+
+            /*string NumberCompare(int x, int y)
+            {
+                if (x > y) return $"{x} is greater than {y}";
+                else if (x < y) return $"{x} is less than {y}";
+                else return $"{x} is equal to {y}";
+            }
+            Console.WriteLine(NumberCompare(5, 10));*/
+
+            void NumberCompare(int x, int y)
+            {
+                if (x > y) Console.WriteLine ($"{x} > {y}");
+                else if (x < y) Console.WriteLine ($"{x} < {y}");
+                else Console.WriteLine ($"{x} = {y}");
+            }
+            NumberCompare(5, 10);
         }
     }
 }
