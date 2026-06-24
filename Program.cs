@@ -127,6 +127,57 @@ namespace LearnCS
                 else Console.WriteLine ($"{x} = {y}");
             }
             NumberCompare(5, 10);
+            
+            Player p1 = new Player();
+            List<Player> players = new List<Player>();
+
+            for (int i = 0; i < 5; i++)
+            {
+                //adding default players to the list
+                players.Add(new Player());
+            }
+
+            // Adding players with specific values
+            players.Add (new Player("A",5, 100));
+            players.Add (new Player("B",5, 500));
+            players.Add(new Player("C", 5, 3000));
+
+            //Display players
+            foreach (Player pl in players) 
+                Console.WriteLine($"Player: {pl.Name}, level: {pl.Level}, Health {pl.Health}");
+
+        }
+    }
+    class Player
+    {
+        string name;
+        int level;
+        int health;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int Level
+        {
+            get { return level; }
+            set { level = value; }
+        }
+        public int Health
+        { 
+            get { return health; }
+            set { health = value; }
+        }
+
+        // Constructor
+        public Player(string name = "Unknown", int level = 1, int health = 100)
+        {
+            this.name = name;
+            this.level = level;
+            this.health = health;
         }
     }
 }
+
